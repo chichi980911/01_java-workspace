@@ -1,0 +1,2 @@
+module variavblePractic2 {
+}
