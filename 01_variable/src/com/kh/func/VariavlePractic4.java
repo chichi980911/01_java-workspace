@@ -1,4 +1,4 @@
-package com.kh.variable;
+package com.kh.func;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ public class VariavlePractic4 {
 	public void InputTest11() {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("과일을 영어로 문자열로 입력하세요 : ");
+		System.out.print("문자열을 입력하세요 : ");
 		String fruit =sc.nextLine();
 		
 		

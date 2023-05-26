@@ -1,4 +1,4 @@
-package com.kh.variable;
+package com.kh.func;
 
 import java.util.Scanner;
 

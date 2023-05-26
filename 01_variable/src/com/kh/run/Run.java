@@ -1,10 +1,14 @@
 package com.kh.run;
 
+//import com.kh.variable.C_Printf;
+
 //import com.kh.variable.A_Variable;
 //import com.kh.variable.B_KeyboardInput;
+import com.kh.variable.D_Cast;
 //--------------------------------------
 //과제1
-import com.kh.variable.VariavlePractic4;
+
+//import com.kh.func.VariavlePractic4;
 
 //
 //과제 2 
@@ -15,8 +19,24 @@ import com.kh.variable.VariavlePractic4;
 
 public class Run {
 	public static void main(String[] args) {
-		VariavlePractic4 g  = new VariavlePractic4();
-		g.InputTest11();
+		D_Cast d = new D_Cast();
+//		d.autoCasting();
+		d.forceCasting();
+		
+		
+		
+//		
+//		B_KeyboardInput b = new B_KeyboardInput();
+//		b.InputTest3();
+		
+//		C_Printf v1 = new C_Printf();
+//		v1.printfTest();
+//		
+		
+		
+//과제4		
+//		VariavlePractic4 g  = new VariavlePractic4();
+//		g.InputTest11();
 //과제3
 //		VariavlePractic3 d = new VariavlePractic3();
 //		d.AreaPerimeter();
