@@ -116,10 +116,14 @@ public class OperatorPractice {
 		
 		int num13 = (num10 +num11 +num12);
 		double num14 = (num13 / 3);
-		//실패
-		//국어 영어 수학의 점수가 각각 40점이면 합격
-		//세과목의 평균이 60점 이상일떄 합격 아닐시 불합격 
 		
+		String result="";
+		if(num10 >= 40 || num11 >= 40 || num12 >= 40) {
+			result="합격";
+		}else if(num14 >= 60) {
+			result="합격";
+		}else{result="불합격";
+		}
 			
 			
 		
@@ -130,7 +134,8 @@ public class OperatorPractice {
 		
 		System.out.println("합계 : " + num13);
 		System.out.println("평균 : " + num14);
-		sc.close();
+		System.out.println(result);
+		
 	}
 			
 		
@@ -156,13 +161,21 @@ public class OperatorPractice {
 	public void practice9() {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("정수1 : ");
+		System.out.print("정수1 : ");
 		int num16 = sc.nextInt();
-		System.out.println("정수2 : ");
+		System.out.print("정수2 : ");
 		int num17 = sc.nextInt();
+		System.out.print("입력 : ");
+		int num18 = sc.nextInt();
+		
+		if (num16 < num17 && num18 <= num16 || num18 > num17) {
+			System.out.println("true");
+		}  else {
+			System.out.println("false");
+		}
 		
 		
-		sc.close();
+		
 	}
 	
 }
