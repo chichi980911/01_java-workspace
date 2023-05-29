@@ -13,6 +13,7 @@ public class A_LogicalNegation {
 		
 		boolean b3 = (5>3);
 		System.out.println("b3 : " + b3);
+		
 	}
 	
 	
