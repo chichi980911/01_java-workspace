@@ -12,9 +12,10 @@ public class Run {
 //	a1.practice5();
 //	a1.practice6();
 //	a1.practice7();
-	
 //	a1.practice8();
-	a1.practice9();
+//	a1.practice9();
+//	a1.practice10();
+	a1.practice11();
 			
 	}
 }
