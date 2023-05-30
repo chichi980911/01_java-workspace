@@ -194,6 +194,8 @@ public class ControlPractice {
 		case "%" : 
 			System.out.println(num +" % "+ num2 + " = " + (num%num2));
 			break;
+		case "0" :
+			
 			
 		}
 		}
