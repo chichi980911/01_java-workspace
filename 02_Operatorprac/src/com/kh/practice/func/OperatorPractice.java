@@ -118,24 +118,17 @@ public class OperatorPractice {
 		double num14 = (num13 / 3);
 		
 		String result="";
-		if(num10 >= 40 || num11 >= 40 || num12 >= 40) {
-			result="합격";
-		}else if(num14 >= 60) {
+		if(num10 >= 40 && num11 >= 40 && num12 >= 40 && num14  >= 60) {
 			result="합격";
 		}else{result="불합격";
 		}
 			
-			
-		
-			
-		
-		
-		
 		
 		System.out.println("합계 : " + num13);
 		System.out.println("평균 : " + num14);
 		System.out.println(result);
 		
+		sc.close();
 	}
 			
 		
@@ -150,11 +143,18 @@ public class OperatorPractice {
 		System.out.print("주민번호를 입력하세요(-포함) : ");
 		char ju = sc.next().charAt(7);
 		
-		System.out.println(ju);
+	
+		if(ju == '1' || ju == '3') {
+			System.out.println("남자");
+		}else if(ju=='2' || ju=='4') {
+			System.out.println("여자");
+		}else {System.out.println("다시입력하세요");}
 		
-		//실패
-//		String result = //ju 에 입력된 수가 1 또는 3일때 "남자" 반환
-//						//ju 에 입력된 수가 2 또는 4일때 "여자" 반환
+		sc.close();
+		
+		
+		
+		
 //		
 		sc.close();
 	}
@@ -168,7 +168,7 @@ public class OperatorPractice {
 		System.out.print("입력 : ");
 		int num18 = sc.nextInt();
 		
-		if (num16 < num17 && num18 <= num16 || num18 > num17) {
+		if (num16 >= num18 || num18 > num17) {
 			System.out.println("true");
 		}  else {
 			System.out.println("false");
@@ -176,6 +176,51 @@ public class OperatorPractice {
 		
 		
 		
+	}
+	
+	public void practice10() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("입력1 : ");
+		int num19 = sc.nextInt();
+		System.out.print("입력2 : ");
+		int num20 = sc.nextInt();
+		System.out.print("입력3 : ");
+		int num21 = sc.nextInt();
+		
+		if(num19==num20 && num19==num21) {
+			System.out.println("true");
+		}else {System.out.println("false");}
+	}
+	public void practice11() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("A사원의 연봉 : ");
+		int num22 = sc.nextInt();
+		System.out.print("B사원의 연봉 : ");
+		int num23 = sc.nextInt();
+		System.out.print("C사원의 연봉 : ");
+		int num24 = sc.nextInt();
+		
+		double num25 = num22*1.4;
+		double num26 = num22;
+		double num27 = num22 * 1.15;
+		
+		String s1 = "3000 이상";
+		String s2 = "3000 미만";
+		
+		System.out.println(num25);
+		System.out.println(num26);
+		System.out.println(num27);
+		
+		
+		
+		System.out.println("A사원 연봉/연봉+a : " + num22 + "/" + num25);
+		System.out.println(num25 >=3000.0 ? s1 : s2);
+		System.out.println("B사원 연봉/연봉+a : " + num23 + "/" +num26);
+		System.out.println(num26 >=3000.0 ? s1 : s2);
+		System.out.println("C사원 연봉/연봉+a : " + num24 + "/" +num27);
+		System.out.println(num27 >=3000.0 ? s1 : s2);
 	}
 	
 }
