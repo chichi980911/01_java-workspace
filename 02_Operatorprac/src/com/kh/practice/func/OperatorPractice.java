@@ -223,4 +223,8 @@ public class OperatorPractice {
 		System.out.println(num27 >=3000.0 ? s1 : s2);
 	}
 	
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 5b64b1e42bb69432d162cb8cd188f3508c895fd4
