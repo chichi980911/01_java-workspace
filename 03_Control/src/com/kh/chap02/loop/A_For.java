@@ -99,20 +99,42 @@ public class A_For {
 	public void method7() {
 		// 사용자에게 값을 입력받아 1부터 입력받은 수가까지의 합계 출력
 		Scanner sc = new Scanner(System.in);
+		//while문 
+		while(true) {
+			System.out.print("1이상의 정수 :  ");
+			int num = sc.nextInt();
 
-		System.out.println("1이상의 정수 :  ");
-		int num = sc.nextInt();
-
-		if (num > 0) {
-			int sum = 0;
-			for (int i = 1; i <= num; i++) {
-				sum += i;
+			if (num > 0) {
+				//누적합
+				//1.sum변수 생성
+				int sum = 0;
+				//2.for문 돌리기
+				for (int i = 1; i <= num; i++) {
+					sum += i;
+				}
+				System.out.println("1부터" + num + "까지의 합 : " + sum);
+				break;
+			} else {
+				System.out.println("잘못 입력했습니다. 다시 입력해주세요");
 			}
-			System.out.println("1부터" + num + "까지의 합 : " + sum);
-
-		} else {
-			System.out.println("잘못 입력했습니다");
 		}
+
+//		System.out.println("1이상의 정수 :  ");
+//		int num = sc.nextInt();
+//
+//		if (num > 0) {
+//			//누적합
+//			//1.sum변수 생성
+//			int sum = 0;
+//			//2.for문 돌리기
+//			for (int i = 1; i <= num; i++) {
+//				sum += i;
+//			}
+//			System.out.println("1부터" + num + "까지의 합 : " + sum);
+//
+//		} else {
+//			System.out.println("잘못 입력했습니다");
+//		}
 
 	}
 
