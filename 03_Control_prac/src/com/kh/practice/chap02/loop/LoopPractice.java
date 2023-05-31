@@ -1,7 +1,7 @@
 package com.kh.practice.chap02.loop;
 
 import java.util.Scanner;
-
+//스캐너
 public class LoopPractice {
 	public void method1() {
 		// 사용자로 부터 양의 정수를 입력 받고 1~ 받은 정수 까지 출력

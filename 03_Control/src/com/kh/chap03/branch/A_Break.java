@@ -1,7 +1,7 @@
 package com.kh.chap03.branch;
 
 import java.util.Scanner;
-
+//스캐너
 public class A_Break {
 	/*
 	 * 분기문 break : 반복문 안에 사용되는 분기문 break 가 실행되는 순간 현재 속해있는 반복문을 빠져나감
