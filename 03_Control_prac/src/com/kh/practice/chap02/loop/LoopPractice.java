@@ -1,6 +1,7 @@
 package com.kh.practice.chap02.loop;
 
 import java.util.Scanner;
+
 //스캐너
 public class LoopPractice {
 	public void method1() {
@@ -230,44 +231,84 @@ public class LoopPractice {
 	public void method12() {
 		Scanner sc = new Scanner(System.in);
 
-		for (;;) {
-
-			System.out.print("연산자(+,-,*,/,%) : ");
+		while (true) {
+			System.out.print("연산자 (+, -, *, /, %): ");
 			String sign = sc.nextLine();
-			if (sign == "exit") {
-				System.out.println("프로그램을 종료합니다");
+
+			if (sign.equals("exit")) {
+				System.out.println("프로그램을 종료합니다.");
 				break;
 			}
-			System.out.print("정수1 : ");
-			int num = sc.nextInt();
 
-			System.out.print("정수2 : ");
+			System.out.print("정수1: ");
+			int num1 = sc.nextInt();
+			System.out.print("정수2: ");
 			int num2 = sc.nextInt();
-			
-			if(sign=="%"&&sign=="/"||num2==0) {
-			System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요");
+
+			if (sign.equals("/") && num2 == 0) {
+				System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.");
+				sc.nextLine(); // 버퍼 비우기
+				continue;
 			}
 
+			int result;
 			switch (sign) {
 			case "+":
-				System.out.println(num + " + " + num2 + " = " + (num + num2));
+				result = num1 + num2;
+				System.out.println(num1 + " + " + num2 + " = " + result);
 				break;
 			case "-":
-				System.out.println(num + " - " + num2 + " = " + (num - num2));
+				result = num1 - num2;
+				System.out.println(num1 + " - " + num2 + " = " + result);
 				break;
 			case "*":
-				System.out.println(num + " * " + num2 + " = " + (num * num2));
+				result = num1 * num2;
+				System.out.println(num1 + " * " + num2 + " = " + result);
 				break;
 			case "/":
-				System.out.println(num + " / " + num2 + " = " + (num / num2));
+				result = num1 / num2;
+				System.out.println(num1 + " / " + num2 + " = " + result);
 				break;
 			case "%":
-				System.out.println(num + " % " + num2 + " = " + (num % num2));
+				result = num1 % num2;
+				System.out.println(num1 + " % " + num2 + " = " + result);
 				break;
-			default : {System.out.println("없는연산자 입니다.다시 입력해주세요");}
-			
+			default:
+				System.out.println("없는 연산자입니다. 다시 입력해주세요.");
 			}
 
+			sc.nextLine(); // 버퍼 비우기
+		}
+
+		sc.close();
+	}
+
+	public void method13() {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("정수 입력: ");
+		int num = sc.nextInt();
+
+		for (int i = 1; i <= num; i++) {
+			for (int j = 1; j <= i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+
+	public void method14() {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("정수 입력: ");
+		int num = sc.nextInt();
+
+		for (int i = 1; i <= num; i++) {
+			for (int j = i; j <= num; j++) {
+
+				System.out.print("*");
+			}
+			System.out.println();
 		}
 	}
 }
