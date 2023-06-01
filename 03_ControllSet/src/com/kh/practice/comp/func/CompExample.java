@@ -53,7 +53,19 @@ public class CompExample {
 		System.out.print("문자 : ");
 		char ch = sc.next().charAt(0);
 		
+		char[] arr = new char[str.length()];
 		
-		System.out.println(str+" 안에 포함된 " + ch + " 개수 : "+//??);
+		for(int i =0; i<str.length();i++) {
+			arr[i]=str.charAt(i);
+		}
+		
+		int count = 0;
+		for (int i = 0; i < arr.length; i++) {
+			
+		if(ch==arr[i]) {
+			count++;
+		}
+		}
+		System.out.println(str+" 안에 포함된 " + ch + " 개수 : " + count);
 	}
 }
