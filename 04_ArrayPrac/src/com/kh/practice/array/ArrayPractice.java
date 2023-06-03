@@ -140,19 +140,24 @@ public class ArrayPractice {
 
 	public void method9() {
 		Scanner sc = new Scanner(System.in);
+
 		System.out.print("치킨 이름을 입력하세요 : ");
 		String str = sc.nextLine();
 
-		String[] arr = { "양념", "간장", "마늘", "우유" };
-		
-		for (int i = 0; ; ) {
+		String menu = "양념,간장,마늘,우유";
+		String[] arr = menu.split(",");
+
+		for (int i = 0; i < arr.length; i++) {
 			if (arr[i].equals(str)) {
 				System.out.println(str + "치킨 배달가능");
-				
-			} else {
+				return;
+			} else if (i == arr.length - 1) {
 				System.out.println(str + "치킨은 없는 메뉴입니다.");
+			} else {
+				continue;
+
 			}
-			
+
 		}
 	}
 
