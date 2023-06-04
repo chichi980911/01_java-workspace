@@ -1,5 +1,6 @@
 package com.kh.practice.array;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayPractice {
@@ -202,21 +203,93 @@ public class ArrayPractice {
 
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = (int) (Math.random() * 10 + 1);
-			
-
 
 			if (arr[i] > max)
 				max = arr[i];
-			
+
 			if (arr[i] < min)
 				min = arr[i];
-			
+
 			System.out.print(arr[i] + " ");
-			
 
 		}
-		
-		System.out.print("\n최대값 : "+max);
-		System.out.print("\n최소값 : "+min);
+
+		System.out.print("\n최대값 : " + max);
+		System.out.print("\n최소값 : " + min);
+	}
+
+	public void method13() {
+		int[] arr = new int[10];
+
+		for (int i = 0; i < arr.length; i++) {
+
+			arr[i] = (int) (Math.random() * 10 + 1);
+
+			for (int j = 0; j < i; j++) {
+				if (arr[i] == arr[j]) {
+					i--;
+					break;
+				}
+			}
+		}
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+
+	}
+
+	public void method14() {
+		int[] arr = new int[6];
+
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = (int) (Math.random() * 99 + 1);
+
+			for (int j = 0; j < i; j++) {
+				if (arr[i] == arr[j]) {
+					i--;
+					break;
+				}
+			}
+		}
+		for (int i = 0; i < arr.length; i++) {
+			Arrays.sort(arr); // Arrays.sort 메서드 사용
+			System.out.print(arr[i] + " ");
+		}
+
+	}
+
+	public void method15() {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("문자열 : ");
+		String str = sc.nextLine();
+
+		char[] arr = new char[str.length()];
+		int count = 0;
+
+		System.out.print("문자열에 있는 문자 : ");
+
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = str.charAt(i);
+
+			boolean flag = true;
+
+			for (int j = 0; j < i; j++) {
+				if (arr[j] == arr[i])
+					flag = false;
+			}
+
+			if (flag) {
+				if (i == 0)
+					System.out.print(arr[i]);
+				else
+					System.out.print(" " + arr[i]);
+
+				count++;
+			}
+		}
+
+		System.out.println("\n문자 개수 : " + count);
+
 	}
 }

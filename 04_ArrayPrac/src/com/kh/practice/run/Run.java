@@ -13,10 +13,13 @@ public class Run {
 //		a.method6();
 //		a.method7();
 //		a.method8();
-		a.method9();
+//		a.method9();
 //		a.method10();
 //		a.method11();
 //		a.method12();
+//		a.method13();
+//		a.method14();
+		a.method15();
 		
 	}
 
