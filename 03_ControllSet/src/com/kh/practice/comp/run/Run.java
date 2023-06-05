@@ -7,7 +7,7 @@ public class Run {
 		CompExample a =new CompExample();
 //		a.method1();
 //		a.method2();
-		a.method3();
+//		a.method3();
 //		a.method4();
 //		a.method5();
 //		a.method6();

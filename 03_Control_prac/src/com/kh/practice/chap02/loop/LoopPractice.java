@@ -245,9 +245,11 @@ public class LoopPractice {
 			System.out.print("정수2: ");
 			int num2 = sc.nextInt();
 
+			sc.nextLine();//버퍼제거
+			
 			if (sign.equals("/") && num2 == 0) {
 				System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.");
-				sc.nextLine(); // 버퍼 비우기
+				
 				continue;
 			}
 
@@ -276,8 +278,6 @@ public class LoopPractice {
 			default:
 				System.out.println("없는 연산자입니다. 다시 입력해주세요.");
 			}
-
-			sc.nextLine(); // 버퍼 비우기
 		}
 
 		sc.close();

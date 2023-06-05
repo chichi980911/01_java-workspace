@@ -19,7 +19,8 @@ public class Run {
 //		a.method12();
 //		a.method13();
 //		a.method14();
-		a.method15();
+//		a.method15();
+		a.method16();
 		
 	}
 

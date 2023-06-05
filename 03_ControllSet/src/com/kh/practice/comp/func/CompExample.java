@@ -68,4 +68,47 @@ public class CompExample {
 		}
 		System.out.println(str+" 안에 포함된 " + ch + " 개수 : " + count);
 	}
-}
+	public void method4(){
+		Scanner sc = new Scanner(System.in);
+		int total = 0; //전 
+		int win = 0; //승
+		int tie = 0;//무
+		int lose = 0;//패
+		
+		
+		System.out.print("당신의 이름을 입력해주세요 : ");
+		String name = sc.nextLine();
+		
+		int random = (int)(Math.random()*3+1);
+		String com = "";
+		switch(random) {
+		case 1 : com="가위"; 
+		break;
+		case 2 : com="바위"; 
+		break;
+		case 3 : com="보"; 
+		break;
+		
+		}
+	
+		int totalgame = 0;
+		while(true) {
+			System.out.print("가위바위보 : ");
+			String rps = sc.nextLine();
+			
+			if(rps.equals("exit")) {
+				System.out.println(total + "전" +win + "승" +tie+"무"+lose+"패");
+				return;
+			}else if (rps.equals("가위")||rps.equals("바위")||rps.equals("보")) {
+				total++;
+				
+				System.out.println("컴퓨터 : " + com);
+				System.out.println(name + " : " + rps );
+			}
+			
+			}
+		}
+
+	}
+	
+

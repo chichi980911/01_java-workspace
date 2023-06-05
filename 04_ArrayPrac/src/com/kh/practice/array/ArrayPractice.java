@@ -136,7 +136,37 @@ public class ArrayPractice {
 	}
 
 	public void method8() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("정수 : ");
+		int num = sc.nextInt();
+		
+		while (true) {
+			if (num % 2 == 1 || num <= 3);
+			{int[] arr = new int[num];
 
+				/*
+				 * 5입력시 => {1,2,3,2,1} => 2번 인덱스까지 증가 이후 감소 7입력시 => {1,2,3,4,3,2,1} => 3번 인덱스 까지
+				 * 증가 이후 감소 9입력시 => {1,2,3,4,5,4,3,2,1,} =>4번 인덱스 까지 증가이후 감소
+				 */
+				int value = 1;
+				for (int i = 0; i < arr.length; i++) {
+					arr[i] = value;
+					if (i < arr.length / 2) {
+						value++;
+					} else {
+						value--;
+					}
+				}
+				for (int i = 0; i < arr.length; i++) {
+					System.out.print(arr[i] + " ");
+				}
+				break;
+			
+			}
+//			else {System.out.println("다시 입력하세요");
+
+		}
 	}
 
 	public void method9() {
@@ -283,7 +313,7 @@ public class ArrayPractice {
 				if (i == 0)
 					System.out.print(arr[i]);
 				else
-					System.out.print(" " + arr[i]);
+					System.out.print(", " + arr[i]);
 
 				count++;
 			}
@@ -292,4 +322,62 @@ public class ArrayPractice {
 		System.out.println("\n문자 개수 : " + count);
 
 	}
-}
+
+	public void method16() {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("배열의 크기를 입력하세요 : ");
+		int num = sc.nextInt();
+
+		String[] origin = new String[num];
+		String[] copy = null;
+
+		for (int i = 0; i < origin.length; i++) {
+			System.out.printf("%d번째 문자열 : \n", i+1);
+			origin[i] = sc.nextLine();
+		}
+		while (true) {
+			System.out.print("더 값을 입력 하시겠습니까?(Y/N) : ");
+			char ch = sc.nextLine().charAt(0);
+			if (ch == 'y' || ch == 'Y') {
+				System.out.print("더 입력하고 싶은 개수 : ");
+				num = sc.nextInt();
+				sc.nextLine();
+				// 더입력경우
+				copy =Arrays.copyOf(origin,origin.length + num );
+				
+				for(int i = origin.length; i<copy.length; i++) {
+					System.out.printf("%d번째 문자열 : " , i+1);
+					copy[i] = sc.nextLine();
+				}
+				origin = copy;
+				
+			} else {// 그만 입력 경우
+				System.out.println("[");
+				for(int i = 0; i <origin.length; i++) {
+					if(i == origin.length -1) {
+						System.out.printf("%s",copy[i]);
+					}else {
+						System.out.printf("%s," , copy[i]);
+					}
+					}break;
+				}
+//					if (ch == 'n' || ch == 'N') {
+//						for(int i = 0; i < copy.length; i++) {
+//						System.out.print(origin[i]);
+//						for(int j = 0; j<i;j++) {
+//							System.out.println(","+origin[i+1]);
+//							
+//						}
+//						
+//				}
+				}
+				}
+			
+		}
+	
+
+		
+	
+
+
