@@ -83,6 +83,12 @@ public class AbstrationRun {
 			
 			System.out.println(park.name + "님의 나이는 "+ park.age+"살 이고, 키는"+park.height +"cm 입니다");
 			
+			Student sara = new Student();
+			sara.name= "이사라";
+			sara.age= 23;
+			sara.height= 180.3;
+			
+			System.out.println(sara.name + "님의 나이는 "+ sara.age+"살 이고, 키는"+sara.height +"cm 입니다");
 			//필드를 public 접근제한자로 작성
 			//=> 필드에 직접적으로 접근해서 값 대입하거나 값을 가져올 수 있다.
 			//=> 외부에서 함부로 값을 변질 시키거나 조회권한이 없는 사람이 가져올 수 있는 문제 발생
