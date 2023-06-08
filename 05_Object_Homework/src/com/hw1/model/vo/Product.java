@@ -19,7 +19,8 @@ public class Product {
 	public Product () {
 		
 	}
-	public Product (String productId,String productName,String productArea,int price,double tax) {
+	public Product (String productId,String productName,
+					String productArea,int price,double tax) {
 		this.productId = productId;
 		this.productName = productName;
 		this.productArea = productArea;
@@ -43,7 +44,7 @@ public class Product {
 		return productId;
 	}
 	public void setproductId(String productId) {
-		this.productName = productId;
+		this.productId = productId;
 	}
 	
 	public String getproductName() {

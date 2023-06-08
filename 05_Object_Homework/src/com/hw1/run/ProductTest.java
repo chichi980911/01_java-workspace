@@ -9,6 +9,7 @@ public class ProductTest {
 		Product p2 = new Product("1gxnote5","LG스마트폰5","경기도 평택",780000,0.7);
 		Product p3 = new Product("ktsnote3","KT스마트폰3","서울시 강남",250000,0.3);
 		
+		
 		System.out.println(p1.information3());
 		System.out.println(p2.information3());
 		System.out.println(p3.information3());
