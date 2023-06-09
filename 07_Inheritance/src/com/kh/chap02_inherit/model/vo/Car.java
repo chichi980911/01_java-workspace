@@ -23,6 +23,9 @@ public class Car extends Vehicle{
 	public void howToMove() {// 이름 이상하게 하면 오류남
 		System.out.println("바퀴를 굴려 움직인다.");
 	}
+	public String toString() {
+		return "ㅁㄴㅇㅁㄴㅇ";
+	}
 		
 	}
 

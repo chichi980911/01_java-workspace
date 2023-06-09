@@ -23,14 +23,14 @@ public class Vehicle {
 	public double getMileage() {
 		return mileage;
 	}
-	public void setMileage() {
-		this.mileage =mileage;
+	public void setMileage(double mileage) {
+		this.mileage = mileage;
 	}
 	
 	public String getKind() {
 		return kind;
 	}
-	public void setKind() {
+	public void setKind(String kind) {
 		this.kind = kind;
 	}
 	public String information() {
