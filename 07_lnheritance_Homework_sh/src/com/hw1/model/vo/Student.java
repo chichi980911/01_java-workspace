@@ -24,8 +24,9 @@ public class Student extends Person{
 		this.major = major;
 	}
 	public String toString() {
-		return super.toString() +" 학년 : " + grade + " 전공 : " +major; 
+		return super.toString()  +"학년 : " + grade + " 전공 : " +major; 
 	}
+
 	
 
 }

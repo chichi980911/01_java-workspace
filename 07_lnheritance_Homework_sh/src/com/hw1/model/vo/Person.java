@@ -46,8 +46,8 @@ public class Person {
 		this.weight = weight;
 	}
 	public String toString() {
-		return "이름 : " + name + " 나이 : " + age + " 신장 : " + height +
-				" 몸무게 : " + weight ;
+		return "이름 : "+name + " 나이 : " + age+  " 신장 : " + height +
+				" 몸무게 : " + weight;
 	}
 	
 	

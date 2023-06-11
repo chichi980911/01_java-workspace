@@ -32,56 +32,57 @@ public class Run {// public class Run{
 		// 입력받은 정보들을 가지고 매개변수 생성자를 이용하여 객체 배열에 객체 생성
 
 		Employee[] em = new Employee[10];
+		int count = 0;
 
 		Scanner sc = new Scanner(System.in);
 
 		while (true) {
-			int i = 0;
-			
-			
-			System.out.print("이름 : ");
-			String name = sc.nextLine();
+				System.out.println("사원 정보를 입력하세요.");
 
-		
-			System.out.print("나이 : ");
-			int age = sc.nextInt();
-			
-			sc.nextLine();
+				System.out.print("이름 : ");
+				String name = sc.nextLine();
 
-			System.out.print("신장 : ");
-			double h = sc.nextDouble();
+				System.out.print("나이 : ");
+				int age = sc.nextInt();
 
-			System.out.print("몸무게 : ");
-			double w = sc.nextDouble();
+				sc.nextLine();
 
-			System.out.print("급여 : ");
-			int s = sc.nextInt();
+				System.out.print("신장 : ");
+				double h = sc.nextDouble();
 
-			
-			sc.nextLine();
-			System.out.print("부서 : ");
-			String d = sc.nextLine();
-			
-			em[i] = new Employee(name, age, h, w, s, d);
-			i++;
+				System.out.print("몸무게 : ");
+				double w = sc.nextDouble();
 
-			System.out.print("인원이 " + i + "만큼 추가되었습니다.");
-			System.out.print("계속 추가할건가요 ? (Y/N) : ");
-			char ch = sc.next().charAt(0);
+				System.out.print("급여 : ");
+				int s = sc.nextInt();
 
-			if (ch == 'n' || ch == 'N') {
+				sc.nextLine();
+				System.out.print("부서 : ");
+				String d = sc.nextLine();
 
-				for (int j = 0; j < i++; j++) {
-					System.out.print("현재까지 입력한 사원정보입니다 : " + em[j].toString());
+				Employee employee = new Employee(name,age,h,w,s,d);
+				 employee.setName(name);
+				 employee.setAge(age);
+				
+				 
+				
+				em[count] = employee;
+				count++;
+				System.out.print("계속 추가할건가요 ? (Y/N) : ");
+				char ch = sc.nextLine().charAt(0);
+
+				if (ch == 'n' || ch == 'N') {
 					break;
 				}
-
-				
 			}
+		for(int i = 0; i < count; i++) {
+		System.out.println("현재까지입력한사원정보 : "+ em[i]);
 		}
 	}
-
+	
 }
+
+
 
 // 한명씩 추가 될때마다 카운트함
 // 계속 추가할 것인지 물어보고, 대소문자 상관없이 y이면 계속 객체 추가
