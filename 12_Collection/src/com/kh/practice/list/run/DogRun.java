@@ -1,6 +1,11 @@
 package com.kh.practice.list.run;
 
+import java.util.ArrayList;
+
 import java.util.Scanner;
+
+import com.kh.chap01_list.part01_basic.model.vo.Music;
+import com.kh.practice.list.model.vo.Dog;
 
 public class DogRun {
 	public static void main(String[] args) {
@@ -10,19 +15,52 @@ public class DogRun {
 		// 2번 인덱스에 마지막 강쥐를 추후에 추가 할 것!(끼워넣기)
 		// + 구 포함한 이름을 가진 강쥐가 몇마리 인지 출력하시오.
 		
+		
+		ArrayList<Dog> list = new ArrayList<>(4);
 		Scanner sc = new Scanner(System.in);
 		
-	 
-			System.out.print("1번째 강쥐 이름 입력 : ");
-			String name = sc.nextLine();
+		for(int i = 1; i < 5; i ++) {
+			System.out.print(i+"번째 강쥐 이름 입력 : ");
+			String a = sc.nextLine();
 			System.out.print("강쥐 나이 입력 : ");
-			int age = sc.nextInt();
+			int b = sc.nextInt();
+			sc.nextLine();
 			System.out.print("강쥐 종 입력 (ex.말티즈) : ");
-			String j = sc.nextLine();
+			String c = sc.nextLine();
+			
+			list.add(new Dog(a, b, c));
+			
+			
+			}
+			System.out.println("=============");
+			System.out.println("전체 깡쥐 출력");
+			System.out.println("=============");
+			
+			list.add(2, new Dog("황구",6,"리트리버"));
+			for(Dog o : list) {
+				System.out.println(o);
+				
+			
+		}
+			System.out.println("=============");
+			System.out.println("이름에 '구'가 들어간 강쥐 정보 출력");
+			System.out.println("=============");
+			
+			for(Dog o :list) {
+				if(o.getName().contains("구")) {
+					System.out.println(o);
+				}
+				
+			}
+		}
+//		System.out.println(list);
+			
+			
+			
 			
 		
 		
 		
-	}
+	
 
 }
