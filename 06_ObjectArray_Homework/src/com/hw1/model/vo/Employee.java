@@ -103,4 +103,11 @@ public class Employee {
 	}
 	public String information() {
 		return empNo+", "+ empName +", "+dept+", "+job +", "+age+", "+gender+", "+salary+", "+bonusPoint+", "+phone+", "+address;}
+	@Override
+	public String toString() {
+		return "Employee [empNo=" + empNo + ", empName=" + empName + ", dept=" + dept + ", job=" + job + ", age=" + age
+				+ ", gender=" + gender + ", salary=" + salary + ", bonusPoint=" + bonusPoint + ", phone=" + phone
+				+ ", address=" + address ;
+	}
+
 }
