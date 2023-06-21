@@ -136,8 +136,6 @@ public class LibraryRun {
 				String description = sc.nextLine();
 				
 				
-				Book nBook = new Book(bNo, title, author, publisher, price, description);
-				bc.addBook(nBook);
 				
 				
 				System.out.print("일반도서이면 true, 잡지이면 false를 입력하세요 : ");
@@ -145,13 +143,20 @@ public class LibraryRun {
 				
 				
 				
-				if (bkOrMaga.equals(true)) {
+				if (bkOrMaga.equals(true)) {Book nBook = new Book(bNo, title, author, publisher, price, description);
+				bc.addBook(nBook);
+				
+				
 					
 				} else if (bkOrMaga.equals(false)) {
 					System.out.print("출간연도를 입력하세요 : ");
 					int year = sc.nextInt();
 					System.out.print("출간월을 입력하세요 : ");
 					int month = sc.nextInt();
+					Magazine magazine = new Magazine(bNo, title, author, publisher, price, description, year, month);
+					bc.addBook(magazine);
+					
+					
 					break;
 				
 					
