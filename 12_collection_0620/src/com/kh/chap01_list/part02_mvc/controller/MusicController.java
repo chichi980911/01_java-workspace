@@ -11,7 +11,7 @@ public class MusicController {
 		list.add(new Music("구구", "이문세"));
 		list.add(new Music("팔팔", "박혁거세"));
 
-		System.out.println(list);
+		
 	}
 
 	public void insertMusic(String title, String artist) {
