@@ -5,16 +5,16 @@ public class Magazine extends Book {
 	private int year;
 	private int month;
 	
-	public Magazine() {
-		
-	}
+	public Magazine() {}
 
-	public Magazine(String bNo, String title,String author,String publisher,
-			int price,String description,int year, int month) {
+	public Magazine(String bNo, String title, String author, String publisher, int price, 
+					String description,int year, int month) {
 		super(bNo,title,author,publisher,price,description);
 		this.year = year;
 		this.month = month;
 	}
+
+	
 
 	public int getYear() {
 		return year;
@@ -36,6 +36,9 @@ public class Magazine extends Book {
 	public String toString() {
 		return super.toString() + "Magazine [year=" + year + ", month=" + month + "]";
 	}
+	
+	
+	
 	
 
 	// 단축키로 생성해보기

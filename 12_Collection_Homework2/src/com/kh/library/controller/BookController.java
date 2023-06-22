@@ -2,13 +2,11 @@ package com.kh.library.controller;
 
 import java.util.ArrayList;
 
-
 import com.kh.library.model.vo.Book;
 import com.kh.library.model.vo.Magazine;
 
 //BookManager 인터페이스 구현
-public class BookController implements BookManager {
-	 
+public class BookController implements BookManager  {
 	ArrayList<Book> list = new ArrayList<>();
 	
 	@Override
@@ -19,9 +17,14 @@ public class BookController implements BookManager {
 
 	@Override
 	public ArrayList<Book> getAllBook() {
+		Book b = null;
+		for(int i = 0; i<list.size(); i++) {
+			b  = list.get(i);
+		}
+		return b;
+		}
 		
-		return list;
-	}
+	
 
 	@Override
 	public Book searchBookBybNo(String bNo) {
@@ -34,28 +37,13 @@ public class BookController implements BookManager {
 	}
 
 	@Override
-	//
 	public ArrayList<Book> onlySearchBook() {
-		ArrayList<Book> BookList = new ArrayList<>();
-		
-		for(int i = 0; i<list.size(); i++) {
-			if(list.get(i) instanceof Book && !(list.get(i) instanceof Magazine)) {
-				BookList.add(list.get(i));
-			}
-		}return BookList;
-		
-		
+		return null;
 	}
 
 	@Override
 	public ArrayList<Book> onlySearchMagazine() {
-		ArrayList<Book> MagazineList = new ArrayList<>();
-		
-		for(int i = 0; i<list.size();i++) {
-			if(list.get(i) instanceof Magazine ) {
-				MagazineList.add(list.get(i));
-			}
-		}return MagazineList;
+		return null;
 	}
 
 	@Override
@@ -82,6 +70,8 @@ public class BookController implements BookManager {
 	public int getAvgPrice() {
 		return 0;
 	}
+	
+	
 	
 
 }
