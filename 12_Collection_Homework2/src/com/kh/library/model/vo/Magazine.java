@@ -34,7 +34,8 @@ public class Magazine extends Book {
 
 	@Override
 	public String toString() {
-		return super.toString() + "Magazine [year=" + year + ", month=" + month + "]";
+		return super.toString() + "Magazine [year=" + year +
+				", month=" + month + "]";
 	}
 	
 

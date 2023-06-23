@@ -17,11 +17,8 @@ public class BookController implements BookManager  {
 
 	@Override
 	public ArrayList<Book> getAllBook() {
-		Book b = null;
-		for(int i = 0; i<list.size(); i++) {
-			b  = list.get(i);
-		}
-		return b;
+
+		return list;
 		}
 		
 	
@@ -38,12 +35,27 @@ public class BookController implements BookManager  {
 
 	@Override
 	public ArrayList<Book> onlySearchBook() {
-		return null;
+		ArrayList<Book> blist = new ArrayList<>();
+		
+		for(int i = 0; i<list.size(); i++) {
+			if(list.get(i) instanceof Magazine) {
+				continue;
+			}
+			blist.add(list.get(i));
+		}
+		return blist;
 	}
 
 	@Override
 	public ArrayList<Book> onlySearchMagazine() {
-		return null;
+		ArrayList<Book> blist = new ArrayList<>();
+		for(int i =0; i<list.size(); i++) {
+			if(list.get(i) instanceof Magazine) {
+				blist.add(list.get(i));
+			}
+		}
+		
+		return blist;
 	}
 
 	@Override

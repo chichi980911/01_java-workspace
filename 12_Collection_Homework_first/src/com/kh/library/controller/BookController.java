@@ -36,7 +36,7 @@ public class BookController implements BookManager {
 	}
 
 	@Override
-	public ArrayList<Book> searchBookByTitle(String title) {
+	public ArrayList<Book> searchBookByTitle(String title) { //is
 		ArrayList<Book> b2 = new ArrayList<>();
 		for (int i = 0; i < list.size(); i++) {
 			if (list.get(i).getTitle().equals(title)) {

@@ -143,10 +143,11 @@ public class LibraryRun {
 				
 				
 				
-				if (bkOrMaga.equals(true)) {Book nBook = new Book(bNo, title, author, publisher, price, description);
+				if (bkOrMaga.equals(true)) {
+				Book nBook = new Book(bNo, title, author, publisher, price, description);
 				bc.addBook(nBook);
 				
-				
+				//중복검사
 					
 				} else if (bkOrMaga.equals(false)) {
 					System.out.print("출간연도를 입력하세요 : ");

@@ -70,17 +70,27 @@ public class LibraryRun {
 				if (search == 1) {
 					//bc.getAllBook
 					
-					ArrayList<Book> list =	bc.getAllBook();
-					for(int i = 0; i<list.size(); i++) {
-						System.out.println(list);
+					ArrayList<Book> b1 = bc.getAllBook();
+					for(int i = 0; i<b1.size(); i++) {
+						System.out.println(b1.get(i));
 					}
 					
 				}
 				else if (search == 2) {
 					//bc.onlySearchBook()
+					
+					ArrayList<Book> b2 = bc.onlySearchBook();
+					for(int i = 0; i < b2.size();i++) {
+						System.out.println(b2.get(i));
+					}
 				}
 				else if (search == 3) {
 					//onlySearchMagazine
+					ArrayList<Book> b3 = bc.onlySearchMagazine();
+					for(int i = 0; i<b3.size(); i++) {
+						System.out.println(b3.get(i));
+					}
+					
 				}
 				else if (search == 4) {
 					// 이전으로 가야함
