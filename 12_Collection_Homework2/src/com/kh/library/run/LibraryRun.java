@@ -51,7 +51,7 @@ public class LibraryRun {
 			Scanner sc = new Scanner(System.in);
 			System.out.print("메뉴번호를 입력해주세요 : ");
 			int menu = sc.nextInt(); // 메뉴 번호 입력
-			
+			sc.nextLine();
 			switch (menu) {
 			case 1: // 1. 조회하기
 				System.out.println("===============================");
@@ -62,11 +62,11 @@ public class LibraryRun {
 				System.out.println("4. 이전으로");
 				System.out.println("===============================");
 
-				sc.nextLine();
+			
 
 				System.out.print("메뉴번호를 입력해주세요 : ");
 				int search = sc.nextInt();
-				
+				sc.nextLine();
 				if (search == 1) {
 					//bc.getAllBook
 					
@@ -102,7 +102,7 @@ public class LibraryRun {
 				String bNo = sc.nextLine();
 				
 				System.out.print("책 제목을 입력하세요 : ");
-				sc.nextLine();
+				
 				String title = sc.nextLine();
 				
 				System.out.print("작가를 입력하세요 : ");
@@ -123,12 +123,24 @@ public class LibraryRun {
 				Boolean bkOrMaga = sc.nextBoolean();
 				
 				if (bkOrMaga.equals(true)) {
+					Book nBook = new Book(bNo,title,author,publisher,price,description);
+					Book book = bc.searchBookBybNo(bNo);
+						if(book == null ) {
+							bc.addBook(book);
+						}else {
+							System.out.println("이미 소장중인 도서입니다");
+							continue;
+						}
 					
 				} else if (bkOrMaga.equals(false)) {
 					System.out.print("출간연도를 입력하세요 : ");
 					int year = sc.nextInt();
 					System.out.print("출간월을 입력하세요 : ");
 					int month = sc.nextInt();
+					
+					
+					Magazine magazine = new Magazine(bNo,title,author,publisher,price,description,year,month);
+					bc.addBook(magazine);
 					
 				}
 
@@ -145,23 +157,25 @@ public class LibraryRun {
 				System.out.println("6. 이전으로");
 				System.out.println("===============================");
 				System.out.print("메뉴번호를 입력해주세요 : ");
-				sc.nextLine();
+				
 				search = sc.nextInt();
+				sc.nextLine();
 
 				if (search == 1) { // bNo으로 책 찾기
 					System.out.print("bNo을 입력하세요 : ");
 					bNo = sc.nextLine();
-					sc.nextLine();
+			
 					
 					//bc.searchBookBybNo()
 				} else if (search == 2) { // 책 제목으로 책 찾기
 					System.out.print("책 제목을 입력하세요 : ");
-					sc.nextLine();
+					
 					title = sc.nextLine();
 					//bc.searchBookByTitle()
 				} else if (search == 3) { // 출간연도로 잡지 찾기
 					System.out.print("출간연도를 입력하세요 : (올해 --> 2022) : ");
 					int year = sc.nextInt();
+					
 					//magazineOfThisYearInfo()
 				} else if (search == 4) { // 4. 출판사로 책 찾기
 					System.out.print("출판사를 입력하세요 : ");
@@ -170,10 +184,11 @@ public class LibraryRun {
 				} else if (search == 5) { // 5. 특정 가격 밑으로 책 찾기
 					System.out.print("가격을 입력하세요 : ");
 					price = sc.nextInt();
-					sc.nextLine();
+					
 					//bc.searchBookByPrice()
 				} else if (search == 6)
 					flag = true; // 6. 이전으로
+				
 				else
 					System.out.println("잘못 입력하셨습니다.");
 				
