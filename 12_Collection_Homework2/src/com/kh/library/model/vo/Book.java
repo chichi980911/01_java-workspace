@@ -30,6 +30,7 @@ public class Book {
 		this.bNo = bNo;
 	}
 
+	
 	public String getTitle() {
 		return title;
 	}

@@ -124,9 +124,9 @@ public class LibraryRun {
 				
 				if (bkOrMaga.equals(true)) {
 					Book nBook = new Book(bNo,title,author,publisher,price,description);
-					Book book = bc.searchBookBybNo(bNo);
-						if(book == null ) {
-							bc.addBook(book);
+					Book b1 = bc.searchBookBybNo(bNo);
+						if(b1 == null ) {
+							bc.addBook(nBook);
 						}else {
 							System.out.println("이미 소장중인 도서입니다");
 							continue;

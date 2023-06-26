@@ -25,16 +25,14 @@ public class BookController implements BookManager  {
 
 	@Override
 	public Book searchBookBybNo(String bNo) {
-		
-		for(int i =0; i<list.size();i++) {
-			Book book = list.get(i);
-			if(book.getbNo().equals(bNo)) {
-				return book;
-				
+			Book book = null;
+			for(Book b:list) {
+				if(b.getbNo().equals(bNo)) {
+					book=b;
+				}
 			}
+			return book;
 		}
-		return null;
-	}
 
 	@Override
 	public ArrayList<Book> searchBookByTitle(String title) {
